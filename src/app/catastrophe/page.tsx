@@ -4,7 +4,7 @@ import Comet from "../../../public/img/comet.jpg"
 
 export default function Catastrophe() {
     return (
-        <section className="flex flex-col items-center p-8 gap-12 bg-slate-900 text-white">
+        <section className="flex flex-col items-center p-8 gap-12 bg-slate-900 text-slate-50">
             <h1 className="text-3xl font-bold">Teoria das Catástrofes Cósmicas</h1>
             <div className="flex items-center justify-center px-8 py-4 gap-6 max-w-4xl">
                 <p className="text-lg">Velikovsky propôs que a história da Terra foi marcada por catástrofes cósmicas, nas quais grandes corpos celestes passaram próximos ou colidiram com nosso planeta. Ele acreditava que tais eventos, como a suposta colisão entre a Terra e um grande cometa, desencadearam desastres naturais em uma escala global. Esses eventos, segundo ele, causaram mudanças abruptas no clima, movimentos tectônicos e grandes tsunamis, que foram documentados em mitos e textos religiosos de culturas ao redor do mundo.</p>
