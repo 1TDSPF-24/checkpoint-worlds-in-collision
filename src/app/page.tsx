@@ -1,8 +1,11 @@
 import Image from "next/image"
 import Immanuel from "../../public/img/immanuel_velikovsky.jpg"
-import Solar from "../../public/img/solar-system.jpg"
 
-export default function Home() {
+export default async function Home() {
+  const solarImageResponse = await fetch('http://localhost:3000/api/nasa')
+  const solarImage = await solarImageResponse.json()
+  console.log(solarImage[0].url)
+
   return (
     <section className="flex flex-col items-center p-8 gap-12 bg-slate-900 text-slate-50">
       <h1 className="text-3xl font-bold">Introdução ao Worlds in Collision</h1>
@@ -11,7 +14,7 @@ export default function Home() {
         <Image src={Immanuel} alt="Imannuel Velikovsky" width={616} height={600} className="size-72 rounded-xl" />
       </div>
       <div className="flex flex-col items-center justify-center px-4 md:flex-row md:px-8 py-4 gap-6 w-full">
-        <Image src={Solar} alt="Sistema Solar" width={1200} height={800} className="size-72 rounded-2xl" />
+        <Image src={`${solarImage[0].url}`} alt="Sistema Solar" width={1200} height={800} className="size-72 rounded-2xl" />
         <p className="text-lg">A obra de Velikovsky foi inicialmente rejeitada por astrônomos e cientistas convencionais, mas teve um impacto significativo no público em geral, abrindo debates sobre a validade dos registros históricos antigos e os efeitos de eventos cósmicos no nosso planeta.</p>
       </div>
     </section>
