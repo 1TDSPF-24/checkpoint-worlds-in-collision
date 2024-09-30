@@ -23,3 +23,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+// api key: Gp46NTWkIy0RnqiBj8cZFgR004wrkwt0DBpJurF2
